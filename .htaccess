@@ -24,6 +24,8 @@ AddType image/webp .webp
   RewriteRule ^([a-z-]+)/$ /frontend/html/$1.html [L]
 
   RewriteRule (^|/)\.(?!well-known/) - [R=404,L]
+
+  RewriteRule ^(README|LICENSE)\.md$ - [R=404,L]
 </IfModule>
 
 <IfModule mod_headers.c>
