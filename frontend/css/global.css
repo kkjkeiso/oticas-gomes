@@ -17,9 +17,10 @@
   --section-y: clamp(80px, 11vw, 160px);
   --radius-sm: 2px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --photo-filter: none;
   --logo-light: block;
   --logo-dark: none;
+  --media-light: block;
+  --media-dark: none;
 
   color-scheme: light;
 }
@@ -36,9 +37,10 @@
   --accent-2: #ff2d42;
   --on-accent: #0a0a0c;
 
-  --photo-filter: invert(1);
   --logo-light: none;
   --logo-dark: block;
+  --media-light: none;
+  --media-dark: block;
   color-scheme: dark;
 }
 

@@ -18,7 +18,9 @@
 .hero__subtitle { max-width: 440px; font-size: 17px; color: var(--ink-soft); }
 .hero__actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
 .hero__visual { display: flex; justify-content: flex-end; margin-top: clamp(-160px, -9vw, -40px); }
-.hero__photo { width: 100%; max-width: 620px; height: auto; filter: var(--photo-filter); }
+.hero__photo { width: 100%; max-width: 620px; height: auto; }
+.hero__photo--light { display: var(--media-light); }
+.hero__photo--dark { display: var(--media-dark); }
 
 @supports (animation-timeline: scroll()) {
   .hero__photo {
