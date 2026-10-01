@@ -1,5 +1,3 @@
-/* Used only on sobre.html */
-
 .timeline { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 20px; }
 .timeline li { display: grid; grid-template-columns: 100px 1fr; gap: 18px; }
 .timeline time { font-family: var(--font-display); font-weight: 700; color: var(--ink); }

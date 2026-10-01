@@ -6,69 +6,23 @@
 <title>Óticas Gomes — O bem-estar da sua visão</title>
 <meta name="description" content="Óticas Gomes: armações receituário, óculos solares e assistência técnica gratuita para clientes. Rede com 7 unidades em 6 cidades do Rio Grande do Norte, desde 2012.">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 132 48'%3E%3Crect width='132' height='48' rx='10' fill='%230d0d0f'/%3E%3Cg fill='none' stroke='%23ff3347' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='10' y='11' width='42' height='28' rx='14'/%3E%3Crect x='80' y='11' width='42' height='28' rx='14'/%3E%3Cpath d='M52 19 Q66 11 80 19'/%3E%3Cpath d='M10 17 L2 9'/%3E%3Cpath d='M122 17 L130 9'/%3E%3C/g%3E%3C/svg%3E">
-
+<link rel="icon" href="frontend/assets/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<script>
-  (function () {
-    var saved = localStorage.getItem('oticasgomes:theme');
-    if (saved) document.documentElement.setAttribute('data-theme', saved);
-  })();
-</script>
-
 <link rel="stylesheet" href="frontend/css/global.css">
 <link rel="stylesheet" href="frontend/css/blog.css">
 <link rel="stylesheet" href="frontend/css/home.css">
+
+<script src="frontend/js/theme.js"></script>
+<script src="frontend/js/components.js" defer></script>
+<script src="frontend/js/main.js" defer></script>
+<script src="frontend/js/home.js" defer></script>
 </head>
 <body>
 
-<div class="scroll-progress" id="scrollProgress"></div>
-
-<header class="site-header" id="siteHeader">
-  <div class="container site-header__inner">
-    <a class="logo" href="#inicio" aria-label="Óticas Gomes, ir para o início">
-      <svg class="logo__icon" viewBox="0 0 132 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <g stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="10" y="11" width="42" height="28" rx="14"/>
-          <rect x="80" y="11" width="42" height="28" rx="14"/>
-          <path d="M52 19 Q66 11 80 19"/>
-          <path d="M10 17 L2 9"/>
-          <path d="M122 17 L130 9"/>
-        </g>
-        <circle cx="66" cy="15" r="3.5" fill="#ff3347"/>
-      </svg>
-      <span class="logo__text">
-        <span class="logo__oticas">Óticas</span>
-        <span class="logo__gomes">G<em>o</em>mes</span>
-      </span>
-    </a>
-
-    <nav class="nav" id="siteNav" aria-label="Navegação principal">
-      <ul class="nav__list">
-        <li><a href="#inicio" class="nav__link" data-nav>Inicial</a></li>
-        <li><a href="frontend/html/sobre.html" class="nav__link" data-nav>Sobre nós</a></li>
-        <li><a href="frontend/html/unidades.html" class="nav__link" data-nav>Unidades</a></li>
-        <li><a href="frontend/html/noticias.html" class="nav__link" data-nav>Notícias</a></li>
-        <li><a href="frontend/html/contato.html" class="nav__link" data-nav>Fale conosco</a></li>
-      </ul>
-    </nav>
-
-    <div class="site-header__actions">
-      <a class="btn btn--ghost" href="tel:+5584994041034">(84) 9 9404-1034</a>
-      <a class="btn btn--primary" href="https://wa.me/5584994041034" target="_blank" rel="noopener">WhatsApp</a>
-      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
-      </button>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="siteNav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
+<site-header></site-header>
 
 <main>
 
@@ -77,7 +31,7 @@
     <div class="container hero__inner">
       <div class="hero__content" data-reveal>
         <p class="eyebrow">Óticas Gomes · Rio Grande do Norte</p>
-        <h1 class="hero__title">O bem-estar da<br>sua visão, <em>de perto</em>.</h1>
+        <h1 class="hero__title">O bem-estar da<br>sua <em>visão</em>.</h1>
         <p class="hero__subtitle">
           Desde 2012 cuidando da visão de quem confia na gente — hoje em 7 unidades,
           presentes em 6 cidades do Rio Grande do Norte, com o mesmo atendimento de sempre.
@@ -91,16 +45,7 @@
       </div>
 
       <div class="hero__visual" data-reveal data-reveal-delay="1">
-        <svg class="hero__glasses" viewBox="0 0 320 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <g stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="20" y="30" width="110" height="80" rx="34"/>
-            <rect x="190" y="30" width="110" height="80" rx="34"/>
-            <path d="M130 52 Q160 24 190 52"/>
-            <path d="M20 46 L-14 22"/>
-            <path d="M300 46 L334 22"/>
-          </g>
-          <circle class="accent-dot" cx="160" cy="38" r="6"/>
-        </svg>
+        <img class="hero__photo" src="frontend/assets/armacao-hero.webp" alt="Armação de óculos de grau preta" width="1120" height="592" fetchpriority="high">
       </div>
     </div>
   </section>
@@ -141,36 +86,38 @@
   </section>
 
   <section class="brands" id="marcas">
-    <div class="container">
+    <div class="container split">
       <div class="section-heading" data-reveal>
         <p class="eyebrow">Quem confia na gente</p>
         <h2>Marcas e laboratórios parceiros</h2>
       </div>
 
-      <div class="brands__group" data-reveal>
-        <p class="brands__label">Armações</p>
-        <ul class="brands__list">
-          <li>Ray-Ban</li>
-          <li>Lacoste</li>
-          <li>Nike</li>
-          <li>Vogue</li>
-          <li>Santa Lolla</li>
-          <li>Ana Hickmann</li>
-          <li>Mormaii</li>
-          <li>e mais</li>
-        </ul>
-      </div>
+      <div class="brands__groups">
+        <div class="brands__group" data-reveal>
+          <p class="brands__label">Armações</p>
+          <ul class="brands__list">
+            <li>Ray-Ban</li>
+            <li>Lacoste</li>
+            <li>Nike</li>
+            <li>Vogue</li>
+            <li>Santa Lolla</li>
+            <li>Ana Hickmann</li>
+            <li>Mormaii</li>
+            <li>e mais</li>
+          </ul>
+        </div>
 
-      <div class="brands__group" data-reveal data-reveal-delay="1">
-        <p class="brands__label">Laboratórios parceiros</p>
-        <ul class="brands__list">
-          <li>Hoya</li>
-          <li>Zeiss</li>
-          <li>Essilor</li>
-          <li>Optview</li>
-          <li>Haytec</li>
-          <li>e mais</li>
-        </ul>
+        <div class="brands__group" data-reveal data-reveal-delay="1">
+          <p class="brands__label">Laboratórios parceiros</p>
+          <ul class="brands__list">
+            <li>Hoya</li>
+            <li>Zeiss</li>
+            <li>Essilor</li>
+            <li>Optview</li>
+            <li>Haytec</li>
+            <li>e mais</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -227,33 +174,33 @@
   </section>
 
   <section class="locations" id="unidades">
-    <div class="container">
+    <div class="container split">
       <div class="section-heading" data-reveal>
         <p class="eyebrow">Onde estamos</p>
         <h2>7 unidades em 6 cidades do Rio Grande do Norte.</h2>
       </div>
-      <ul class="locations__chips" data-reveal>
-        <li>Apodi</li>
-        <li>Felipe Guerra</li>
-        <li>Severiano Melo</li>
-        <li>Governador Dix-Sept Rosado</li>
-        <li>Baraúnas</li>
-        <li>Natal</li>
-      </ul>
-      <a class="link-more" href="frontend/html/unidades.html">
-        Ver todas as unidades
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <div data-reveal data-reveal-delay="1">
+        <ul class="locations__chips">
+          <li>Apodi</li>
+          <li>Felipe Guerra</li>
+          <li>Severiano Melo</li>
+          <li>Governador Dix-Sept Rosado</li>
+          <li>Baraúnas</li>
+          <li>Natal</li>
+        </ul>
+        <a class="link-more" href="frontend/html/unidades.html">
+          Ver todas as unidades
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
   <section class="blog" id="noticias">
-    <div class="container">
-      <div class="section-heading section-heading__row" data-reveal>
-        <div>
-          <p class="eyebrow">Notícias</p>
-          <h2>Últimas Notícias</h2>
-        </div>
+    <div class="container split">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Notícias</p>
+        <h2>Últimas Notícias</h2>
         <a class="link-more" href="frontend/html/noticias.html">
           Ver todas as notícias
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -277,96 +224,38 @@
   </section>
 
   <section class="cta-band" id="contato">
-    <div class="container cta-band__inner" data-reveal>
-      <h2>Fale Conosco</h2>
-      <p>Dúvidas, orçamento ou só quer marcar um horário? Chama a gente.</p>
-      <div class="cta-band__contacts">
-        <a class="contact-pill" href="https://wa.me/5584994041034" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1s-.6.8-.7.9-.3.2-.5.1a6.6 6.6 0 0 1-1.9-1.2 7 7 0 0 1-1.3-1.6c-.1-.2 0-.3.1-.5l.4-.4.2-.4v-.4c0-.1-.5-1.3-.7-1.8s-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1c0 1.3.9 2.5 1 2.7.1.2 1.8 2.9 4.5 4a15 15 0 0 0 1.5.5 3.6 3.6 0 0 0 1.7.1 2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
-          (84) 9 9404-1034
-        </a>
-        <a class="contact-pill" href="mailto:contato@oticasgomesrn.com.br">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-          contato@oticasgomesrn.com.br
-        </a>
-        <a class="contact-pill" href="https://instagram.com/oticasgomesrn" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-          @oticasgomesrn
-        </a>
+    <div class="container">
+      <div class="cta-band__inner" data-reveal>
+        <div>
+          <h2>Fale Conosco</h2>
+          <p>Dúvidas, orçamento ou só quer marcar um horário? Chama a gente.</p>
+        </div>
+        <div>
+          <div class="cta-band__contacts">
+            <a class="contact-pill" href="https://wa.me/5584994041034" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1s-.6.8-.7.9-.3.2-.5.1a6.6 6.6 0 0 1-1.9-1.2 7 7 0 0 1-1.3-1.6c-.1-.2 0-.3.1-.5l.4-.4.2-.4v-.4c0-.1-.5-1.3-.7-1.8s-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1c0 1.3.9 2.5 1 2.7.1.2 1.8 2.9 4.5 4a15 15 0 0 0 1.5.5 3.6 3.6 0 0 0 1.7.1 2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+              (84) 9 9404-1034
+            </a>
+            <a class="contact-pill" href="mailto:contato@oticasgomesrn.com.br">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              contato@oticasgomesrn.com.br
+            </a>
+            <a class="contact-pill" href="https://instagram.com/oticasgomesrn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+              @oticasgomesrn
+            </a>
+          </div>
+          <p class="cta-band__hours">
+            Segunda a sexta: 7h30 às 12h e 14h30 às 17h30 · Sábado: 7h30 às 12h
+          </p>
+        </div>
       </div>
-      <p class="cta-band__hours">
-        Segunda a sexta: 7h30 às 12h e 14h30 às 17h30 · Sábado: 7h30 às 12h
-      </p>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="container site-footer__inner">
-    <div class="site-footer__brand">
-      <a class="logo logo--footer" href="#inicio" aria-label="Óticas Gomes, ir para o início">
-        <svg class="logo__icon" viewBox="0 0 132 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <g stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="10" y="11" width="42" height="28" rx="14"/>
-            <rect x="80" y="11" width="42" height="28" rx="14"/>
-            <path d="M52 19 Q66 11 80 19"/>
-            <path d="M10 17 L2 9"/>
-            <path d="M122 17 L130 9"/>
-          </g>
-          <circle cx="66" cy="15" r="3.5" fill="#ff3347"/>
-        </svg>
-        <span class="logo__text">
-          <span class="logo__oticas">Óticas</span>
-          <span class="logo__gomes">G<em>o</em>mes</span>
-        </span>
-      </a>
-      <p>O bem-estar da sua visão.</p>
-    </div>
+<site-footer></site-footer>
 
-    <nav class="site-footer__nav" aria-label="Acesso rápido">
-      <p class="site-footer__heading">Acesso rápido</p>
-      <ul>
-        <li><a href="#inicio">Inicial</a></li>
-        <li><a href="frontend/html/sobre.html">Sobre nós</a></li>
-        <li><a href="frontend/html/unidades.html">Unidades</a></li>
-        <li><a href="frontend/html/noticias.html">Notícias</a></li>
-        <li><a href="frontend/html/contato.html">Fale conosco</a></li>
-      </ul>
-    </nav>
-
-    <div class="site-footer__contact">
-      <p class="site-footer__heading">Fale conosco</p>
-      <p><a href="tel:+5584994041034">(84) 9 9404-1034</a></p>
-      <p><a href="mailto:contato@oticasgomesrn.com.br">contato@oticasgomesrn.com.br</a></p>
-      <div class="site-footer__social">
-        <a href="https://instagram.com/oticasgomesrn" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-        </a>
-        <a href="https://facebook.com/OticaGomesRn" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 8h2V4h-2a5 5 0 0 0-5 5v2H8v4h2v7h4v-7h3l1-4h-4V9a1 1 0 0 1 1-1Z"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="site-footer__bottom">
-    <div class="container">
-      <p>Copyright © 2026 Óticas Gomes. Todos os direitos reservados.</p>
-    </div>
-  </div>
-</footer>
-
-<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
-</button>
-
-<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite">
-  <p>Este site usa cookies para personalizar o conteúdo e analisar o tráfego a fim de oferecer a você uma experiência melhor.</p>
-  <button class="btn btn--primary btn--sm" id="cookieAccept">Permitir cookies</button>
-</div>
-
-<script src="frontend/js/main.js"></script>
-<script src="frontend/js/home.js"></script>
 </body>
 </html>

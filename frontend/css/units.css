@@ -1,7 +1,7 @@
-/* Unit cards — used only on unidades.html */
 .units { padding: 0 0 88px; }
-.units__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; }
+.units__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; }
 .unit-card { background: var(--surface); padding: 28px 26px; }
+.unit-card:first-child { grid-column: span 2; }
 .unit-card h3 { font-size: 1.05rem; margin-bottom: 4px; }
 .unit-card__tag { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
 .unit-card p { margin: 0 0 4px; font-size: 14px; }
@@ -13,4 +13,5 @@
 
 @media (max-width: 560px) {
   .units__grid { grid-template-columns: 1fr; }
+  .unit-card:first-child { grid-column: auto; }
 }

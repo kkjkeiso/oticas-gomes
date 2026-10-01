@@ -20,9 +20,12 @@ HTML5, CSS3 (variáveis nativas, sem framework) e JavaScript puro. Sem build ste
 │   │   ├── sobre.css          # Exclusivo de sobre.html
 │   │   ├── units.css          # Exclusivo de unidades.html
 │   │   └── contato.css        # Exclusivo de contato.html
+│   ├── assets/                # Imagens e favicon
 │   ├── js/
-│   │   ├── main.js            # Comportamento comum a todas as páginas
-│   │   └── home.js            # Exclusivo da página inicial (scrollspy, contadores)
+│   │   ├── theme.js           # Aplica o tema salvo antes da página renderizar
+│   │   ├── components.js      # <site-header> e <site-footer>, compartilhados por todas as páginas
+│   │   ├── main.js            # Animações de entrada comuns a todas as páginas
+│   │   └── home.js            # Exclusivo da página inicial (contadores)
 │   └── html/
 │       ├── sobre.html         # História, missão e valores
 │       ├── unidades.html      # Lista das unidades físicas
