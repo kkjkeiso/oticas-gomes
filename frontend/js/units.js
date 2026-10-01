@@ -1,0 +1,86 @@
+const UNITS = [
+  {
+    slug: 'apodi',
+    tag: 'Sede',
+    name: 'Apodi',
+    city: 'Apodi',
+    description: 'A sede da Óticas Gomes, em Apodi.',
+    address: null,
+    phone: null,
+    mapEmbed: null,
+    photos: { facade: null, interior: null, showcase: null, service: null },
+  },
+  {
+    slug: 'apodi-soledade',
+    tag: 'Unidade',
+    name: 'Distrito de Soledade',
+    city: 'Apodi',
+    description: 'A unidade da Óticas Gomes no Distrito de Soledade, em Apodi.',
+    address: null,
+    phone: null,
+    mapEmbed: null,
+    photos: { facade: null, interior: null, showcase: null, service: null },
+  },
+  {
+    slug: 'felipe-guerra',
+    tag: 'Unidade',
+    name: 'Felipe Guerra',
+    city: 'Felipe Guerra',
+    description: 'A unidade da Óticas Gomes em Felipe Guerra.',
+    address: null,
+    phone: null,
+    mapEmbed: null,
+    photos: { facade: null, interior: null, showcase: null, service: null },
+  },
+  {
+    slug: 'severiano-melo',
+    tag: 'Unidade',
+    name: 'Severiano Melo',
+    city: 'Severiano Melo',
+    description: 'A unidade da Óticas Gomes em Severiano Melo.',
+    address: null,
+    phone: null,
+    mapEmbed: null,
+    photos: { facade: null, interior: null, showcase: null, service: null },
+  },
+  {
+    slug: 'governador-dix-sept-rosado',
+    tag: 'Unidade',
+    name: 'Governador Dix-Sept Rosado',
+    city: 'Governador Dix-Sept Rosado',
+    description: 'A unidade da Óticas Gomes em Governador Dix-Sept Rosado.',
+    address: null,
+    phone: null,
+    mapEmbed: null,
+    photos: { facade: null, interior: null, showcase: null, service: null },
+  },
+  {
+    slug: 'baraunas',
+    tag: 'Unidade',
+    name: 'Baraúnas',
+    city: 'Baraúnas',
+    description: 'A unidade da Óticas Gomes em Baraúnas.',
+    address: null,
+    phone: null,
+    mapEmbed: null,
+    photos: { facade: null, interior: null, showcase: null, service: null },
+  },
+  {
+    slug: 'natal',
+    tag: 'Unidade',
+    name: 'Natal',
+    city: 'Natal',
+    description: 'A unidade da Óticas Gomes em Natal.',
+    address: null,
+    phone: null,
+    mapEmbed: null,
+    photos: { facade: null, interior: null, showcase: null, service: null },
+  },
+];
+
+const unitFullName = (unit) => (unit.name === unit.city ? unit.name : `${unit.city} · ${unit.name}`);
+
+const unitPhoto = (src, label, alt) =>
+  src
+    ? `<img class="photo__media" src="${src}" alt="${alt}" loading="lazy">`
+    : `<div class="photo__media photo__empty">${label}</div>`;

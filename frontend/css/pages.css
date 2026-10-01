@@ -12,7 +12,7 @@
 }
 .page-hero__breadcrumb a { color: var(--ink); transition: color 0.3s var(--ease); }
 .page-hero__breadcrumb a:hover { color: var(--accent); }
-.page-hero__breadcrumb span { width: 28px; height: 1px; background: var(--accent); }
+.page-hero__breadcrumb span:not([data-unit]) { width: 28px; height: 1px; background: var(--accent); }
 .page-hero h1 {
   font-size: clamp(2.6rem, 7vw, 6.4rem);
   line-height: 0.95;

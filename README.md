@@ -19,16 +19,21 @@ HTML5, CSS3 (variáveis nativas, sem framework) e JavaScript puro. Sem build ste
 │   │   ├── pages.css          # Chrome comum das subpáginas (cabeçalho de página, blocos de texto)
 │   │   ├── sobre.css          # Exclusivo de sobre.html
 │   │   ├── units.css          # Exclusivo de unidades.html
+│   │   ├── unit.css           # Exclusivo de unidade.html
 │   │   └── contato.css        # Exclusivo de contato.html
 │   ├── assets/                # Imagens e favicon
 │   ├── js/
 │   │   ├── theme.js           # Aplica o tema salvo antes da página renderizar
 │   │   ├── components.js      # <site-header> e <site-footer>, compartilhados por todas as páginas
+│   │   ├── units.js           # Dados das unidades (endereço, telefone, mapa, fotos)
+│   │   ├── unit-page.js       # Preenche unidade.html com a unidade da URL
+│   │   ├── units-list.js      # Monta a lista de unidades.html
 │   │   ├── main.js            # Animações de entrada comuns a todas as páginas
 │   │   └── home.js            # Exclusivo da página inicial (contadores)
 │   └── html/
 │       ├── sobre.html         # História, missão e valores
 │       ├── unidades.html      # Lista das unidades físicas
+│       ├── unidade.html       # Modelo de página de unidade, preenchido via ?u=<slug>
 │       ├── noticias.html      # Notícias completas
 │       └── contato.html       # Canais de atendimento e horário
 ```

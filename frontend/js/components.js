@@ -12,13 +12,14 @@
   const PAGES = [
     { label: 'Inicial', path: 'index.html' },
     { label: 'Sobre nós', path: 'frontend/html/sobre.html' },
-    { label: 'Unidades', path: 'frontend/html/unidades.html' },
+    { label: 'Unidades', path: 'frontend/html/unidades.html', also: 'frontend/html/unidade.html' },
     { label: 'Notícias', path: 'frontend/html/noticias.html' },
     { label: 'Fale conosco', path: 'frontend/html/contato.html' },
   ];
 
   const normalize = (pathname) => pathname.replace(/index\.html$/, '');
-  const isCurrent = (path) => normalize(new URL(url(path)).pathname) === normalize(location.pathname);
+  const isCurrent = (...paths) =>
+    paths.filter(Boolean).some((path) => normalize(new URL(url(path)).pathname) === normalize(location.pathname));
 
   const logo = (modifier = '') => `
     <a class="logo ${modifier}" href="${url('index.html')}" aria-label="Óticas Gomes, ir para o início">
@@ -28,8 +29,8 @@
 
   class SiteHeader extends HTMLElement {
     connectedCallback() {
-      const navItems = PAGES.map(({ label, path }) => {
-        const current = isCurrent(path);
+      const navItems = PAGES.map(({ label, path, also }) => {
+        const current = isCurrent(path, also);
         return `<li><a href="${url(path)}" class="nav__link${current ? ' is-active' : ''}"${current ? ' aria-current="page"' : ''}>${label}</a></li>`;
       }).join('');
 
