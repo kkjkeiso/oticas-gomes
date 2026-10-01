@@ -27,76 +27,125 @@
 
   <section class="page-hero">
     <div class="container page-hero__inner">
-      <div class="page-hero__text">
+      <div>
         <p class="page-hero__breadcrumb" data-reveal>
-          <a href="../../index.html">Página inicial</a> / Unidades
+          <a href="../../index.html">Início</a><span></span>Unidades
         </p>
-        <h1 data-reveal>7 unidades, 6 cidades, um só cuidado.</h1>
-        <p data-reveal data-reveal-delay="1">
+        <h1 data-split>7 unidades, 6 cidades, um só cuidado.</h1>
+        <p class="page-hero__lead" data-reveal data-reveal-delay="2">
           Do oeste potiguar até Natal, a Óticas Gomes está cada vez mais perto de você.
         </p>
       </div>
-      <aside class="page-hero__aside" data-reveal data-reveal-delay="2">
-        <h2>Horário de funcionamento</h2>
-        <p>Vale para todas as unidades.</p>
-        <div class="hours-table">
-          <div class="hours-table__row"><span>Segunda a sexta</span><span>7h30 às 12h e 14h30 às 17h30</span></div>
-          <div class="hours-table__row"><span>Sábado</span><span>7h30 às 12h</span></div>
-          <div class="hours-table__row"><span>Domingo</span><span>Fechado</span></div>
-        </div>
+      <div data-reveal data-reveal-delay="2">
+        <p class="page-hero__label">Horário de funcionamento · todas as unidades</p>
+        <dl class="hours">
+          <div><dt>Segunda a sexta</dt><dd>7h30 às 12h e 14h30 às 17h30</dd></div>
+          <div><dt>Sábado</dt><dd>7h30 às 12h</dd></div>
+          <div><dt>Domingo</dt><dd>Fechado</dd></div>
+        </dl>
         <a class="link-more" href="contato.html">
           Falar com a gente
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-      </aside>
+      </div>
     </div>
   </section>
 
-  <section class="units">
+  <section class="section">
     <div class="container">
-      <div class="units__grid">
-        <article class="unit-card" data-reveal>
-          <span class="unit-card__tag">Sede</span>
-          <h3>Apodi</h3>
-          <p class="unit-card__pending">Endereço e telefone em breve</p>
-        </article>
-
-        <article class="unit-card" data-reveal data-reveal-delay="1">
-          <span class="unit-card__tag">Unidade</span>
-          <h3>Apodi — Distrito de Soledade</h3>
-          <p class="unit-card__pending">Endereço e telefone em breve</p>
-        </article>
-
-        <article class="unit-card" data-reveal data-reveal-delay="2">
-          <span class="unit-card__tag">Unidade</span>
-          <h3>Felipe Guerra</h3>
-          <p class="unit-card__pending">Endereço e telefone em breve</p>
-        </article>
-
-        <article class="unit-card" data-reveal>
-          <span class="unit-card__tag">Unidade</span>
-          <h3>Severiano Melo</h3>
-          <p class="unit-card__pending">Endereço e telefone em breve</p>
-        </article>
-
-        <article class="unit-card" data-reveal data-reveal-delay="1">
-          <span class="unit-card__tag">Unidade</span>
-          <h3>Governador Dix-Sept Rosado</h3>
-          <p class="unit-card__pending">Endereço e telefone em breve</p>
-        </article>
-
-        <article class="unit-card" data-reveal data-reveal-delay="2">
-          <span class="unit-card__tag">Unidade</span>
-          <h3>Baraúnas</h3>
-          <p class="unit-card__pending">Endereço e telefone em breve</p>
-        </article>
-
-        <article class="unit-card" data-reveal>
-          <span class="unit-card__tag">Unidade</span>
-          <h3>Natal</h3>
-          <p class="unit-card__pending">Endereço e telefone em breve</p>
-        </article>
-      </div>
+      <ol class="units">
+        <li class="unit" id="apodi" data-reveal>
+          <span class="unit__index">01</span>
+          <div>
+            <span class="unit__tag">Sede</span>
+            <h2>Apodi</h2>
+            <div class="unit__info">
+              <p class="unit__pending">Endereço e telefone em breve</p>
+            </div>
+          </div>
+          <figure class="photo" style="--ratio: 4 / 3">
+            <div class="photo__frame"><div class="photo__media photo__empty">Foto · fachada</div></div>
+          </figure>
+        </li>
+        <li class="unit" id="apodi-soledade" data-reveal>
+          <span class="unit__index">02</span>
+          <div>
+            <span class="unit__tag">Unidade</span>
+            <h2>Apodi · Distrito de Soledade</h2>
+            <div class="unit__info">
+              <p class="unit__pending">Endereço e telefone em breve</p>
+            </div>
+          </div>
+          <figure class="photo" style="--ratio: 4 / 3">
+            <div class="photo__frame"><div class="photo__media photo__empty">Foto · fachada</div></div>
+          </figure>
+        </li>
+        <li class="unit" id="felipe-guerra" data-reveal>
+          <span class="unit__index">03</span>
+          <div>
+            <span class="unit__tag">Unidade</span>
+            <h2>Felipe Guerra</h2>
+            <div class="unit__info">
+              <p class="unit__pending">Endereço e telefone em breve</p>
+            </div>
+          </div>
+          <figure class="photo" style="--ratio: 4 / 3">
+            <div class="photo__frame"><div class="photo__media photo__empty">Foto · fachada</div></div>
+          </figure>
+        </li>
+        <li class="unit" id="severiano-melo" data-reveal>
+          <span class="unit__index">04</span>
+          <div>
+            <span class="unit__tag">Unidade</span>
+            <h2>Severiano Melo</h2>
+            <div class="unit__info">
+              <p class="unit__pending">Endereço e telefone em breve</p>
+            </div>
+          </div>
+          <figure class="photo" style="--ratio: 4 / 3">
+            <div class="photo__frame"><div class="photo__media photo__empty">Foto · fachada</div></div>
+          </figure>
+        </li>
+        <li class="unit" id="governador-dix-sept-rosado" data-reveal>
+          <span class="unit__index">05</span>
+          <div>
+            <span class="unit__tag">Unidade</span>
+            <h2>Governador Dix-Sept Rosado</h2>
+            <div class="unit__info">
+              <p class="unit__pending">Endereço e telefone em breve</p>
+            </div>
+          </div>
+          <figure class="photo" style="--ratio: 4 / 3">
+            <div class="photo__frame"><div class="photo__media photo__empty">Foto · fachada</div></div>
+          </figure>
+        </li>
+        <li class="unit" id="baraunas" data-reveal>
+          <span class="unit__index">06</span>
+          <div>
+            <span class="unit__tag">Unidade</span>
+            <h2>Baraúnas</h2>
+            <div class="unit__info">
+              <p class="unit__pending">Endereço e telefone em breve</p>
+            </div>
+          </div>
+          <figure class="photo" style="--ratio: 4 / 3">
+            <div class="photo__frame"><div class="photo__media photo__empty">Foto · fachada</div></div>
+          </figure>
+        </li>
+        <li class="unit" id="natal" data-reveal>
+          <span class="unit__index">07</span>
+          <div>
+            <span class="unit__tag">Unidade</span>
+            <h2>Natal</h2>
+            <div class="unit__info">
+              <p class="unit__pending">Endereço e telefone em breve</p>
+            </div>
+          </div>
+          <figure class="photo" style="--ratio: 4 / 3">
+            <div class="photo__frame"><div class="photo__media photo__empty">Foto · fachada</div></div>
+          </figure>
+        </li>
+      </ol>
     </div>
   </section>
 

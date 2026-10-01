@@ -1,4 +1,6 @@
 (() => {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
   function animateCount(el) {
     const target = Number(el.dataset.countTo || '0');
     const duration = 1400;
@@ -24,5 +26,5 @@
     },
     { threshold: 0.6 }
   );
-  document.querySelectorAll('.stat__value[data-count-to]').forEach((el) => countObserver.observe(el));
+  document.querySelectorAll('[data-count-to]').forEach((el) => countObserver.observe(el));
 })();

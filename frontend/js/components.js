@@ -77,6 +77,7 @@
       const setOpen = (open) => {
         header.classList.toggle('is-menu-open', open);
         toggle.setAttribute('aria-expanded', String(open));
+        document.body.style.overflow = open ? 'hidden' : '';
       };
 
       toggle.addEventListener('click', () => setOpen(!header.classList.contains('is-menu-open')));
@@ -89,11 +90,18 @@
       const header = this.querySelector('.site-header');
       const progress = this.querySelector('.scroll-progress');
 
+      let lastY = scrollY;
+
       const onScroll = () => {
         const doc = document.documentElement;
         const max = doc.scrollHeight - doc.clientHeight;
+        const goingDown = scrollY > lastY;
+        const menuOpen = header.classList.contains('is-menu-open');
+
         header.classList.toggle('is-scrolled', scrollY > 40);
-        progress.style.width = max > 0 ? `${(scrollY / max) * 100}%` : '0%';
+        header.classList.toggle('is-hidden', goingDown && scrollY > 400 && !menuOpen);
+        progress.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+        lastY = scrollY;
       };
 
       document.addEventListener('scroll', onScroll, { passive: true });
