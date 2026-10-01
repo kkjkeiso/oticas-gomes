@@ -48,7 +48,7 @@
 
 [hidden] { display: none !important; }
 
-html { scroll-behavior: smooth; background: var(--bg); }
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
