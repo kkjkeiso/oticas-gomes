@@ -1,6 +1,6 @@
 Options -Indexes
 DirectoryIndex index.html
-ErrorDocument 404 /404.html
+ErrorDocument 404 /frontend/html/404.html
 
 AddType image/webp .webp
 
@@ -13,6 +13,15 @@ AddType image/webp .webp
 
   RewriteCond %{THE_REQUEST} \s/+(.*?/)?index\.html[\s?] [NC]
   RewriteRule ^ /%1 [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/+frontend/html/([a-z-]+)\.html[\s?] [NC]
+  RewriteRule ^ /%1/ [R=301,L]
+
+  RewriteCond %{DOCUMENT_ROOT}/frontend/html/$1.html -f
+  RewriteRule ^([a-z-]+)$ /$1/ [R=301,L]
+
+  RewriteCond %{DOCUMENT_ROOT}/frontend/html/$1.html -f
+  RewriteRule ^([a-z-]+)/$ /frontend/html/$1.html [L]
 
   RewriteRule (^|/)\.(?!well-known/) - [R=404,L]
 </IfModule>

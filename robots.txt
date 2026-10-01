@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /404.html
+Disallow: /frontend/html/404.html
 
 Sitemap: https://oticasgomesrn.com.br/sitemap.xml

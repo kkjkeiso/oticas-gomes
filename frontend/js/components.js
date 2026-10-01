@@ -111,7 +111,7 @@
       this.innerHTML = `
         <footer class="site-footer">
           <div class="container site-footer__inner">
-            <div>${logo('logo--footer')}</div>
+            <div class="site-footer__brand">${logo('logo--footer')}</div>
             <nav aria-label="Acesso rápido">
               <p class="site-footer__heading overline">Acesso rápido</p>
               <ul class="site-footer__links">${navItems}</ul>
