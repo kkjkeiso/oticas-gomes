@@ -98,12 +98,9 @@ const unitPhoto = (file, label, alt) =>
     ? `<img class="photo__media" src="${new URL(file, UNITS_PHOTOS).href}" alt="${alt}" loading="lazy">`
     : `<div class="photo__media photo__empty overline">${label}</div>`;
 
-const padIndex = (index) => String(index + 1).padStart(2, '0');
-
-const cityRow = ({ index, name, meta, href }) => `
+const cityRow = ({ name, meta, href }) => `
   <li data-reveal>
     <a href="${href}">
-      <span class="index">${padIndex(index)}</span>
       <span class="cities__name">${name}</span>
       <span class="cities__meta">${meta}</span>
       ${icon('arrow')}
