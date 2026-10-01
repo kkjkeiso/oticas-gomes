@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fale conosco — Óticas Gomes</title>
+<meta name="description" content="Fale com a Óticas Gomes por WhatsApp, telefone, e-mail ou redes sociais. Veja também o horário de funcionamento das unidades.">
+
+<link rel="canonical" href="https://oticasgomesrn.com.br/contato/">
+<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Óticas Gomes">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Fale conosco — Óticas Gomes">
+<meta property="og:description" content="Fale com a Óticas Gomes por WhatsApp, telefone, e-mail ou redes sociais. Veja também o horário de funcionamento das unidades.">
+<meta property="og:url" content="https://oticasgomesrn.com.br/contato/">
+<meta property="og:image" content="https://oticasgomesrn.com.br/frontend/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Óticas Gomes — O bem-estar da sua visão. Desde 2012, 7 unidades no Rio Grande do Norte.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../frontend/assets/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../frontend/css/global.css">
+<link rel="stylesheet" href="../frontend/css/pages.css">
+
+<script src="../frontend/js/theme.js"></script>
+<script src="../frontend/js/site.js" defer></script>
+<script src="../frontend/js/units.js" defer></script>
+<script src="../frontend/js/posts.js" defer></script>
+<script src="../frontend/js/components.js" defer></script>
+<script src="../frontend/js/units-render.js" defer></script>
+<script src="../frontend/js/nearby.js" defer></script>
+<script src="../frontend/js/main.js" defer></script>
+</head>
+<body>
+
+<site-header></site-header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div>
+        <p class="page-hero__breadcrumb overline" data-reveal>
+          <a href="../">Início</a><span></span>Fale conosco
+        </p>
+        <h1 data-split>Fale com a gente.</h1>
+        <p class="page-hero__lead" data-reveal data-reveal-delay="2">
+          Dúvidas, orçamento ou só quer marcar um horário? Escolha o canal que preferir.
+          A resposta mais rápida é pelo WhatsApp.
+        </p>
+      </div>
+      <div data-reveal data-reveal-delay="2">
+        <p class="page-hero__label overline">Horário de funcionamento · todas as unidades</p>
+        <site-hours></site-hours>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container cta__inner">
+      <site-contacts channels="whatsapp email instagram facebook" data-reveal></site-contacts>
+
+      <div class="cta__aside" data-reveal data-reveal-delay="1">
+        <h3>Prefere ir a uma unidade?</h3>
+        <p>
+          Cada unidade tem o próprio WhatsApp. Escolha a loja mais perto de você
+          na lista e fale direto com quem vai te atender.
+        </p>
+        <a class="link-more" href="../unidades/">
+          Ver todas as unidades
+          <span class="icon icon--arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<site-footer></site-footer>
+
+</body>
+</html>

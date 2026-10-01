@@ -1,4 +1,18 @@
 (() => {
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const { whatsappMessage, whatsappNumber } = document.body.dataset;
+  document.querySelectorAll('[data-whatsapp]').forEach((link) => (link.href = whatsappUrl(whatsappMessage, whatsappNumber)));
+
+  document.querySelectorAll('.marquee__track').forEach((track) => {
+    const list = track.firstElementChild;
+    for (let copy = 0; copy < 3; copy++) {
+      const clone = list.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.append(clone);
+    }
+  });
+
   let wordIndex = 0;
 
   const splitNode = (node) => {
@@ -33,17 +47,35 @@
     splitNode(el);
   });
 
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
+  const animateCount = (el) => {
+    const target = Number(el.dataset.countTo);
+    const duration = 1400;
+    const start = performance.now();
+
+    const tick = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      el.textContent = Math.round(target * (1 - Math.pow(1 - progress, 3)));
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  const onVisible = (selector, callback, options) => {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
+          callback(entry.target);
           observer.unobserve(entry.target);
         }
       });
-    },
-    { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
-  );
+    }, options);
+    document.querySelectorAll(selector).forEach((el) => observer.observe(el));
+  };
 
-  document.querySelectorAll('[data-reveal], [data-split], .photo').forEach((el) => revealObserver.observe(el));
+  onVisible('[data-reveal], [data-split], .photo', (el) => el.classList.add('is-visible'), {
+    threshold: 0.15,
+    rootMargin: '0px 0px -40px 0px',
+  });
+
+  if (!reducedMotion) onVisible('[data-count-to]', animateCount, { threshold: 0.6 });
 })();

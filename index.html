@@ -6,19 +6,37 @@
 <title>Óticas Gomes — O bem-estar da sua visão</title>
 <meta name="description" content="Óticas Gomes: armações receituário, óculos solares e assistência técnica gratuita para clientes. Rede com 7 unidades em 6 cidades do Rio Grande do Norte, desde 2012.">
 
+<link rel="canonical" href="https://oticasgomesrn.com.br/">
+<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Óticas Gomes">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Óticas Gomes — O bem-estar da sua visão">
+<meta property="og:description" content="Óticas Gomes: armações receituário, óculos solares e assistência técnica gratuita para clientes. Rede com 7 unidades em 6 cidades do Rio Grande do Norte, desde 2012.">
+<meta property="og:url" content="https://oticasgomesrn.com.br/">
+<meta property="og:image" content="https://oticasgomesrn.com.br/frontend/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Óticas Gomes — O bem-estar da sua visão. Desde 2012, 7 unidades no Rio Grande do Norte.">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="icon" href="frontend/assets/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="frontend/css/global.css">
-<link rel="stylesheet" href="frontend/css/blog.css">
 <link rel="stylesheet" href="frontend/css/home.css">
 
 <script src="frontend/js/theme.js"></script>
+<script src="frontend/js/site.js" defer></script>
+<script src="frontend/js/units.js" defer></script>
+<script src="frontend/js/posts.js" defer></script>
 <script src="frontend/js/components.js" defer></script>
+<script src="frontend/js/units-render.js" defer></script>
+<script src="frontend/js/nearby.js" defer></script>
 <script src="frontend/js/main.js" defer></script>
-<script src="frontend/js/home.js" defer></script>
 </head>
 <body>
 
@@ -28,7 +46,7 @@
 
   <section class="hero" id="inicio">
     <div class="container">
-      <p class="eyebrow" data-reveal>Óticas Gomes · Rio Grande do Norte</p>
+      <p class="eyebrow overline" data-reveal>Óticas Gomes · Rio Grande do Norte</p>
       <h1 class="hero__title" data-split>O bem-estar da sua <em>visão</em>.</h1>
 
       <div class="hero__body">
@@ -38,9 +56,9 @@
             em 6 cidades do Rio Grande do Norte, com o mesmo atendimento de sempre.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--primary btn--lg" href="https://wa.me/5584994041034" target="_blank" rel="noopener">
+            <a class="btn btn--primary btn--lg" href="https://wa.me/5584994041034" target="_blank" rel="noopener" data-whatsapp>
               Falar no WhatsApp
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              <span class="icon icon--arrow" aria-hidden="true"></span>
             </a>
             <a class="btn btn--outline btn--lg" href="#produtos">Produtos e serviços</a>
           </div>
@@ -52,10 +70,10 @@
       </div>
 
       <dl class="hero__meta" data-reveal data-reveal-delay="3">
-        <div><dt>Fundação</dt><dd>2012</dd></div>
-        <div><dt>Unidades</dt><dd>7</dd></div>
-        <div><dt>Cidades no RN</dt><dd>6</dd></div>
-        <div><dt>Assistência técnica</dt><dd>Gratuita para clientes</dd></div>
+        <div><dt class="overline">Fundação</dt><dd>2012</dd></div>
+        <div><dt class="overline">Unidades</dt><dd>7</dd></div>
+        <div><dt class="overline">Cidades no RN</dt><dd>6</dd></div>
+        <div><dt class="overline">Assistência técnica</dt><dd>Gratuita para clientes</dd></div>
       </dl>
     </div>
   </section>
@@ -63,11 +81,11 @@
   <section class="gallery" aria-label="Fotos das lojas">
     <div class="container gallery__grid">
       <figure class="photo photo--parallax gallery__main" style="--ratio: 16 / 10">
-        <div class="photo__frame"><div class="photo__media photo__empty">Foto · interior da loja</div></div>
+        <div class="photo__frame"><div class="photo__media photo__empty overline">Foto · interior da loja</div></div>
         <figcaption><span>Nossas lojas</span><span>Apodi, RN</span></figcaption>
       </figure>
       <figure class="photo photo--parallax gallery__side" style="--ratio: 4 / 5">
-        <div class="photo__frame"><div class="photo__media photo__empty">Foto · atendimento</div></div>
+        <div class="photo__frame"><div class="photo__media photo__empty overline">Foto · atendimento</div></div>
         <figcaption><span>Atendimento próximo</span></figcaption>
       </figure>
     </div>
@@ -77,7 +95,7 @@
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="eyebrow" data-reveal><span class="eyebrow__index">01</span> O que oferecemos</p>
+          <p class="eyebrow overline" data-reveal><span class="eyebrow__index">01</span> O que oferecemos</p>
           <h2 data-split>Produtos e serviços</h2>
         </div>
         <div class="section-head__aside" data-reveal data-reveal-delay="1">
@@ -85,29 +103,29 @@
         </div>
       </div>
 
-      <ol class="services">
+      <ol class="services rows">
         <li class="service" data-reveal>
-          <span class="service__index">01</span>
+          <span class="index">01</span>
           <h3>Armações receituário</h3>
           <p>Armações para todos os estilos, ajustadas ao seu grau com precisão e conforto no dia a dia.</p>
           <figure class="photo service__photo" style="--ratio: 4 / 3">
-            <div class="photo__frame"><div class="photo__media photo__empty">Foto · armações</div></div>
+            <div class="photo__frame"><div class="photo__media photo__empty overline">Foto · armações</div></div>
           </figure>
         </li>
         <li class="service" data-reveal>
-          <span class="service__index">02</span>
+          <span class="index">02</span>
           <h3>Óculos solares</h3>
           <p>Proteção para os olhos sem abrir mão do estilo, com opções para todas as ocasiões.</p>
           <figure class="photo service__photo" style="--ratio: 4 / 3">
-            <div class="photo__frame"><div class="photo__media photo__empty">Foto · solares</div></div>
+            <div class="photo__frame"><div class="photo__media photo__empty overline">Foto · solares</div></div>
           </figure>
         </li>
         <li class="service" data-reveal>
-          <span class="service__index">03</span>
+          <span class="index">03</span>
           <h3>Assistência técnica</h3>
           <p>Ajustes e pequenos reparos no seu óculos, <strong>gratuitos para clientes</strong>.</p>
           <figure class="photo service__photo" style="--ratio: 4 / 3">
-            <div class="photo__frame"><div class="photo__media photo__empty">Foto · bancada técnica</div></div>
+            <div class="photo__frame"><div class="photo__media photo__empty overline">Foto · bancada técnica</div></div>
           </figure>
         </li>
       </ol>
@@ -118,7 +136,7 @@
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="eyebrow" data-reveal><span class="eyebrow__index">02</span> Quem confia na gente</p>
+          <p class="eyebrow overline" data-reveal><span class="eyebrow__index">02</span> Quem confia na gente</p>
           <h2 data-split>Marcas e laboratórios parceiros</h2>
         </div>
         <div class="section-head__aside" data-reveal data-reveal-delay="1">
@@ -128,36 +146,18 @@
     </div>
 
     <div class="marquee" data-reveal>
-      <p class="marquee__label container">Armações</p>
+      <p class="marquee__label overline container">Armações</p>
       <div class="marquee__track">
         <ul class="marquee__list">
-          <li>Ray-Ban</li><li>Lacoste</li><li>Nike</li><li>Vogue</li><li>Santa Lolla</li><li>Ana Hickmann</li><li>Mormaii</li>
-        </ul>
-        <ul class="marquee__list" aria-hidden="true">
-          <li>Ray-Ban</li><li>Lacoste</li><li>Nike</li><li>Vogue</li><li>Santa Lolla</li><li>Ana Hickmann</li><li>Mormaii</li>
-        </ul>
-        <ul class="marquee__list" aria-hidden="true">
-          <li>Ray-Ban</li><li>Lacoste</li><li>Nike</li><li>Vogue</li><li>Santa Lolla</li><li>Ana Hickmann</li><li>Mormaii</li>
-        </ul>
-        <ul class="marquee__list" aria-hidden="true">
           <li>Ray-Ban</li><li>Lacoste</li><li>Nike</li><li>Vogue</li><li>Santa Lolla</li><li>Ana Hickmann</li><li>Mormaii</li>
         </ul>
       </div>
     </div>
 
     <div class="marquee marquee--reverse" data-reveal>
-      <p class="marquee__label container">Laboratórios</p>
+      <p class="marquee__label overline container">Laboratórios</p>
       <div class="marquee__track">
         <ul class="marquee__list">
-          <li>Hoya</li><li>Zeiss</li><li>Essilor</li><li>Optview</li><li>Haytec</li>
-        </ul>
-        <ul class="marquee__list" aria-hidden="true">
-          <li>Hoya</li><li>Zeiss</li><li>Essilor</li><li>Optview</li><li>Haytec</li>
-        </ul>
-        <ul class="marquee__list" aria-hidden="true">
-          <li>Hoya</li><li>Zeiss</li><li>Essilor</li><li>Optview</li><li>Haytec</li>
-        </ul>
-        <ul class="marquee__list" aria-hidden="true">
           <li>Hoya</li><li>Zeiss</li><li>Essilor</li><li>Optview</li><li>Haytec</li>
         </ul>
       </div>
@@ -167,25 +167,25 @@
   <section class="section" id="sobre">
     <div class="container about">
       <figure class="photo photo--parallax about__photo" style="--ratio: 4 / 5">
-        <div class="photo__frame"><div class="photo__media photo__empty">Foto · equipe ou fachada</div></div>
+        <div class="photo__frame"><div class="photo__media photo__empty overline">Foto · equipe ou fachada</div></div>
       </figure>
 
       <div class="about__text">
-        <p class="eyebrow" data-reveal><span class="eyebrow__index">03</span> Sobre nós</p>
+        <p class="eyebrow overline" data-reveal><span class="eyebrow__index">03</span> Sobre nós</p>
         <h2 data-split>Uma família cuidando da visão de outras famílias.</h2>
         <p data-reveal>
           A Óticas Gomes nasceu em 2012 e cresceu unidade por unidade, sem perder o
           atendimento próximo e a assistência técnica gratuita para quem já é cliente.
         </p>
-        <dl class="facts" data-reveal data-reveal-delay="1">
+        <dl class="facts rows" data-reveal data-reveal-delay="1">
           <div><dt>2012</dt><dd>ano de fundação</dd></div>
           <div><dt data-count-to="7">7</dt><dd>unidades físicas</dd></div>
           <div><dt data-count-to="6">6</dt><dd>cidades do Rio Grande do Norte</dd></div>
           <div><dt>R$ 0</dt><dd>em ajustes e pequenos reparos para clientes</dd></div>
         </dl>
-        <a class="link-more" href="frontend/html/sobre.html" data-reveal>
+        <a class="link-more" href="sobre/" data-reveal>
           Conheça nossa história
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <span class="icon icon--arrow" aria-hidden="true"></span>
         </a>
       </div>
     </div>
@@ -195,64 +195,19 @@
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="eyebrow" data-reveal><span class="eyebrow__index">04</span> Onde estamos</p>
+          <p class="eyebrow overline" data-reveal><span class="eyebrow__index">04</span> Onde estamos</p>
           <h2 data-split>7 unidades em 6 cidades.</h2>
         </div>
         <div class="section-head__aside" data-reveal data-reveal-delay="1">
-          <p>Do oeste potiguar até Natal. Escolha a cidade para ver a unidade mais perto de você.</p>
+          <p>Do oeste potiguar até Natal. Escolha a cidade ou deixe a gente encontrar a unidade mais perto de você.</p>
+          <button class="link-more" type="button" data-nearby>
+            Encontrar a mais perto
+            <span class="icon icon--arrow" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
 
-      <ul class="cities">
-        <li data-reveal>
-          <a href="frontend/html/unidades.html#apodi">
-            <span class="cities__index">01</span>
-            <span class="cities__name">Apodi</span>
-            <span class="cities__meta">Sede e Distrito de Soledade · 2 unidades</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </li>
-        <li data-reveal>
-          <a href="frontend/html/unidade.html?u=felipe-guerra">
-            <span class="cities__index">02</span>
-            <span class="cities__name">Felipe Guerra</span>
-            <span class="cities__meta">1 unidade</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </li>
-        <li data-reveal>
-          <a href="frontend/html/unidade.html?u=severiano-melo">
-            <span class="cities__index">03</span>
-            <span class="cities__name">Severiano Melo</span>
-            <span class="cities__meta">1 unidade</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </li>
-        <li data-reveal>
-          <a href="frontend/html/unidade.html?u=governador-dix-sept-rosado">
-            <span class="cities__index">04</span>
-            <span class="cities__name">Governador Dix-Sept Rosado</span>
-            <span class="cities__meta">1 unidade</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </li>
-        <li data-reveal>
-          <a href="frontend/html/unidade.html?u=baraunas">
-            <span class="cities__index">05</span>
-            <span class="cities__name">Baraúnas</span>
-            <span class="cities__meta">1 unidade</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </li>
-        <li data-reveal>
-          <a href="frontend/html/unidade.html?u=natal">
-            <span class="cities__index">06</span>
-            <span class="cities__name">Natal</span>
-            <span class="cities__meta">1 unidade</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </li>
-      </ul>
+      <ul class="cities rows" data-cities-list></ul>
     </div>
   </section>
 
@@ -260,64 +215,30 @@
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="eyebrow" data-reveal><span class="eyebrow__index">05</span> Notícias</p>
+          <p class="eyebrow overline" data-reveal><span class="eyebrow__index">05</span> Notícias</p>
           <h2 data-split>Últimas notícias</h2>
         </div>
         <div class="section-head__aside" data-reveal data-reveal-delay="1">
-          <a class="link-more" href="frontend/html/noticias.html">
+          <a class="link-more" href="noticias/">
             Ver todas as notícias
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <span class="icon icon--arrow" aria-hidden="true"></span>
           </a>
         </div>
       </div>
 
-      <div class="posts">
-        <article class="post" data-reveal>
-          <time datetime="2025-02-21">21 fev 2025</time>
-          <h3>Astigmatismo: você pode ter e nem saber!</h3>
-          <p>Você já sentiu sua visão embaçada, turva ou distorcida? Pode ser astigmatismo, um problema refrativo que afeta milhões de pessoas e muitas vezes passa despercebido.</p>
-        </article>
-        <article class="post" data-reveal>
-          <time datetime="2025-02-17">17 fev 2025</time>
-          <h3>Materiais de armação: escolha o melhor pra você</h3>
-          <p>Conheça os diferentes materiais utilizados nas armações de óculos e descubra qual combina mais com seu estilo e conforto.</p>
-        </article>
-      </div>
+      <div class="posts rows" data-posts="2"></div>
     </div>
   </section>
 
   <section class="cta" id="contato">
     <div class="container cta__inner">
       <div>
-        <p class="eyebrow" data-reveal><span class="eyebrow__index">06</span> Fale conosco</p>
+        <p class="eyebrow overline" data-reveal><span class="eyebrow__index">06</span> Fale conosco</p>
         <h2 data-split>Dúvida, orçamento ou horário? Chama a gente.</h2>
-        <dl class="hours" data-reveal data-reveal-delay="1">
-          <div><dt>Segunda a sexta</dt><dd>7h30 às 12h e 14h30 às 17h30</dd></div>
-          <div><dt>Sábado</dt><dd>7h30 às 12h</dd></div>
-          <div><dt>Domingo</dt><dd>Fechado</dd></div>
-        </dl>
+        <site-hours data-reveal data-reveal-delay="1"></site-hours>
       </div>
 
-      <ul class="contact-list" data-reveal data-reveal-delay="1">
-        <li>
-          <a href="https://wa.me/5584994041034" target="_blank" rel="noopener">
-            <span><small>WhatsApp</small><br>(84) 9 9404-1034</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </a>
-        </li>
-        <li>
-          <a href="mailto:contato@oticasgomesrn.com.br">
-            <span><small>E-mail</small><br>contato@oticasgomesrn.com.br</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://instagram.com/oticasgomesrn" target="_blank" rel="noopener">
-            <span><small>Instagram</small><br>@oticasgomesrn</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </a>
-        </li>
-      </ul>
+      <site-contacts channels="whatsapp email instagram" data-reveal data-reveal-delay="1"></site-contacts>
     </div>
   </section>
 

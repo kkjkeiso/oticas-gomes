@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unidade — Óticas Gomes</title>
+<meta name="description" content="Endereço, WhatsApp e horário das unidades da Óticas Gomes no Rio Grande do Norte.">
+
+<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Óticas Gomes">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Unidades — Óticas Gomes">
+<meta property="og:description" content="Endereço, WhatsApp e horário das unidades da Óticas Gomes no Rio Grande do Norte.">
+<meta property="og:url" content="https://oticasgomesrn.com.br/loja/">
+<meta property="og:image" content="https://oticasgomesrn.com.br/frontend/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Óticas Gomes — O bem-estar da sua visão. Desde 2012, 7 unidades no Rio Grande do Norte.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../frontend/assets/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../frontend/css/global.css">
+<link rel="stylesheet" href="../frontend/css/pages.css">
+
+<script src="../frontend/js/theme.js"></script>
+<script src="../frontend/js/site.js" defer></script>
+<script src="../frontend/js/units.js" defer></script>
+<script src="../frontend/js/posts.js" defer></script>
+<script src="../frontend/js/components.js" defer></script>
+<script src="../frontend/js/units-render.js" defer></script>
+<script src="../frontend/js/nearby.js" defer></script>
+<script src="../frontend/js/main.js" defer></script>
+</head>
+<body>
+
+<site-header></site-header>
+
+<main data-unit-page>
+
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <div>
+        <p class="page-hero__breadcrumb overline" data-reveal>
+          <a href="../">Início</a><span></span><a href="../unidades/">Unidades</a><span></span><span data-unit="name"></span>
+        </p>
+        <p class="unit-hero__tag overline overline--accent" data-reveal data-unit="tag"></p>
+        <h1 data-split data-unit="name"></h1>
+        <p class="page-hero__lead" data-reveal data-reveal-delay="2">
+          <span data-unit="description"></span> O mesmo atendimento próximo de sempre, com assistência técnica gratuita para clientes.
+        </p>
+        <div class="page-hero__actions" data-reveal data-reveal-delay="3">
+          <a class="btn btn--primary btn--lg" href="https://wa.me/5584994041034" target="_blank" rel="noopener" data-whatsapp>
+            Falar no WhatsApp
+            <span class="icon icon--arrow" aria-hidden="true"></span>
+          </a>
+          <a class="btn btn--outline btn--lg" href="#endereco">Endereço e contato</a>
+        </div>
+      </div>
+      <div data-reveal data-reveal-delay="2">
+        <p class="page-hero__label overline">Horário de funcionamento</p>
+        <site-hours></site-hours>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-banner" aria-label="Fachada da unidade">
+    <div class="container">
+      <figure class="photo photo--parallax" style="--ratio: 21 / 9">
+        <div class="photo__frame" data-unit-photo="facade"></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="endereco">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow overline" data-reveal><span class="eyebrow__index">01</span> Como chegar</p>
+          <h2 data-split>Endereço e contato</h2>
+        </div>
+      </div>
+
+      <div class="details">
+        <dl class="details__list rows" data-reveal>
+          <div><dt class="overline">Endereço</dt><dd data-unit="address"></dd></div>
+          <div><dt class="overline">Cidade</dt><dd data-unit="city"></dd></div>
+          <div hidden><dt class="overline">Distância</dt><dd data-unit="distance"></dd></div>
+          <div><dt class="overline" data-unit="whatsapp-label"></dt><dd data-unit="whatsapp"></dd></div>
+        </dl>
+        <figure class="photo" style="--ratio: 4 / 3">
+          <div class="photo__frame" data-unit="map"></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow overline" data-reveal><span class="eyebrow__index">02</span> A loja</p>
+          <h2 data-split>Por dentro da unidade</h2>
+        </div>
+        <div class="section-head__aside" data-reveal data-reveal-delay="1">
+          <p>Armações receituário, óculos solares e assistência técnica, tudo no mesmo lugar.</p>
+        </div>
+      </div>
+
+      <div class="unit-gallery">
+        <figure class="photo photo--parallax unit-gallery__a" style="--ratio: 4 / 3">
+          <div class="photo__frame" data-unit-photo="interior"></div>
+        </figure>
+        <figure class="photo photo--parallax unit-gallery__b" style="--ratio: 4 / 5">
+          <div class="photo__frame" data-unit-photo="showcase"></div>
+        </figure>
+        <figure class="photo photo--parallax unit-gallery__c" style="--ratio: 16 / 10">
+          <div class="photo__frame" data-unit-photo="service"></div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow overline" data-reveal><span class="eyebrow__index">03</span> Outras unidades</p>
+          <h2 data-split>Mais perto de você</h2>
+        </div>
+        <div class="section-head__aside" data-reveal data-reveal-delay="1">
+          <a class="link-more" href="../unidades/">
+            Ver todas as unidades
+            <span class="icon icon--arrow" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+
+      <ul class="cities rows" data-unit="others"></ul>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container cta__inner">
+      <div>
+        <p class="eyebrow overline" data-reveal><span class="eyebrow__index">04</span> Fale conosco</p>
+        <h2 data-split>Vai passar na loja? Chama a gente antes.</h2>
+      </div>
+
+      <site-contacts channels="whatsapp instagram" data-reveal data-reveal-delay="1"></site-contacts>
+    </div>
+  </section>
+
+</main>
+
+<site-footer></site-footer>
+
+</body>
+</html>
