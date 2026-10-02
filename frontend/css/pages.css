@@ -49,7 +49,6 @@
   gap: 40px clamp(24px, 4vw, 64px);
 }
 .pillars li { border-top: 1px solid var(--ink); padding-top: 22px; }
-.pillars .index { display: block; color: var(--accent); margin-bottom: 40px; }
 .pillars h3 { font-size: clamp(1.3rem, 2.2vw, 1.75rem); margin-bottom: 12px; }
 .pillars p { margin: 0; font-size: 15px; }
 

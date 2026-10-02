@@ -27,14 +27,13 @@
     const cities = new Map();
     UNITS.forEach((unit) => cities.set(unit.city, [...(cities.get(unit.city) ?? []), unit]));
 
-    list.innerHTML = [...cities].map(([city, units], index) => {
+    list.innerHTML = [...cities].map(([city, units]) => {
       const single = units.length === 1;
       const meta = single
         ? '1 unidade'
         : `${units.map((unit) => (unit.name === unit.city ? unit.tag : unit.name)).join(' e ')} · ${units.length} unidades`;
 
       return cityRow({
-        index,
         name: city,
         meta,
         href: single ? unitUrl(units[0]) : unitsUrl(`#${units[0].slug}`),
@@ -93,9 +92,8 @@
 
     fill(
       'others',
-      UNITS.map((item, index) => ({ item, index }))
-        .filter(({ item }) => item !== unit)
-        .map(({ item, index }) => cityRow({ index, name: unitFullName(item), meta: item.tag, href: unitUrl(item) }))
+      UNITS.filter((item) => item !== unit)
+        .map((item) => cityRow({ name: unitFullName(item), meta: item.tag, href: unitUrl(item) }))
         .join('')
     );
   };
