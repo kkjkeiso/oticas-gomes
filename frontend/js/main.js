@@ -72,7 +72,7 @@
     document.querySelectorAll(selector).forEach((el) => observer.observe(el));
   };
 
-  onVisible('[data-reveal], [data-split], .photo', (el) => el.classList.add('is-visible'), {
+  onVisible('[data-reveal], [data-split]', (el) => el.classList.add('is-visible'), {
     threshold: 0.15,
     rootMargin: '0px 0px -40px 0px',
   });

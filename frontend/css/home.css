@@ -43,14 +43,9 @@
 .hero__meta > div + div { padding-left: 24px; border-left: 1px solid var(--line); }
 .hero__meta dd { margin: 6px 0 0; font-family: var(--font-display); font-size: clamp(1.15rem, 1.8vw, 1.5rem); font-weight: 600; letter-spacing: -0.02em; color: var(--ink); }
 
-.gallery { padding-bottom: var(--section-y); }
-.gallery__grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(16px, 2vw, 32px); align-items: start; }
-.gallery__main { grid-column: 1 / span 8; }
-.gallery__side { grid-column: 10 / span 3; margin-top: clamp(80px, 14vw, 240px); }
-
 .service {
   display: grid;
-  grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1.2fr) clamp(160px, 16vw, 240px);
+  grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1.2fr);
   gap: 24px clamp(24px, 4vw, 64px);
   align-items: start;
   padding: clamp(24px, 3vw, 40px) 0;
@@ -99,13 +94,7 @@
   to { transform: translateX(-50%); }
 }
 
-.about {
-  display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-  gap: 48px clamp(40px, 7vw, 128px);
-  align-items: start;
-}
-.about__photo { position: sticky; top: 100px; }
+.about__text { max-width: 760px; }
 .about__text h2 { font-size: clamp(2rem, 4.2vw, 3.6rem); max-width: 16ch; }
 .about__text > p { font-size: 17px; max-width: 520px; }
 .about .facts { margin-top: clamp(32px, 4vw, 56px); }
@@ -118,20 +107,12 @@
   .hero__meta > div:nth-child(3) { padding-left: 0; border-left: none; }
   .hero__meta > div:nth-child(n + 3) { border-top: 1px solid var(--line); margin-top: 18px; }
 
-  .gallery__main { grid-column: 1 / -1; }
-  .gallery__side { grid-column: 5 / -1; margin-top: 0; }
-
   .service { grid-template-columns: 40px minmax(0, 1fr); }
-  .service p, .service__photo { grid-column: 2; }
-  .service__photo { max-width: 360px; }
-
-  .about { grid-template-columns: 1fr; }
-  .about__photo { position: static; max-width: 520px; }
+  .service p { grid-column: 2; }
 }
 
 @media (max-width: 560px) {
   .hero__meta > div { padding-right: 12px; }
   .hero__meta > div + div { padding-left: 12px; }
   .hero__meta > div:nth-child(3) { padding-left: 0; }
-  .gallery__side { grid-column: 3 / -1; }
 }

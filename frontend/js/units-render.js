@@ -15,9 +15,6 @@
               <p class="unit__distance" data-distance="${unit.slug}" hidden></p>
               <span class="link-more">Ver unidade ${icon('arrow')}</span>
             </div>
-            <figure class="photo" style="--ratio: 4 / 3">
-              <div class="photo__frame">${unitPhoto(unit.photos.facade, 'Foto · fachada', `Fachada da Óticas Gomes ${fullName}`)}</div>
-            </figure>
           </a>
         </li>`;
     }).join('');
@@ -71,24 +68,7 @@
     fill('address', unit.address || pending);
     fill('whatsapp-label', unit.phone ? 'WhatsApp da loja' : 'WhatsApp central');
     fill('whatsapp', `<a href="${whatsappUrl(message, number)}" target="_blank" rel="noopener" data-whatsapp>${unit.phone ?? SITE.phone}</a>`);
-    fill(
-      'map',
-      unit.mapEmbed
-        ? `<iframe class="photo__media" src="${unit.mapEmbed}" title="Mapa da unidade ${fullName}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`
-        : '<div class="photo__media photo__empty overline">Mapa · em breve</div>'
-    );
     document.querySelector('[data-unit="distance"]').dataset.distance = unit.slug;
-
-    const photoLabels = {
-      facade: ['Foto · fachada da unidade', 'Fachada'],
-      interior: ['Foto · interior da loja', 'Interior'],
-      showcase: ['Foto · vitrine', 'Vitrine'],
-      service: ['Foto · atendimento', 'Atendimento'],
-    };
-    document.querySelectorAll('[data-unit-photo]').forEach((el) => {
-      const [label, alt] = photoLabels[el.dataset.unitPhoto];
-      el.innerHTML = unitPhoto(unit.photos[el.dataset.unitPhoto], label, `${alt} da Óticas Gomes ${fullName}`);
-    });
 
     fill(
       'others',

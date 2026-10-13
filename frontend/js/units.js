@@ -8,8 +8,6 @@ const UNITS = [
     address: 'R. Antônio Lopes Filho, 133',
     phone: '(84) 9 9404-1034',
     coords: [-5.6639, -37.7989],
-    mapEmbed: null,
-    photos: { facade: null, interior: null, showcase: null, service: null },
   },
   {
     slug: 'apodi-soledade',
@@ -20,8 +18,6 @@ const UNITS = [
     address: null,
     phone: '(84) 9 9611-1289',
     coords: [-5.5983, -37.8299],
-    mapEmbed: null,
-    photos: { facade: null, interior: null, showcase: null, service: null },
   },
   {
     slug: 'felipe-guerra',
@@ -32,8 +28,6 @@ const UNITS = [
     address: null,
     phone: '(84) 9 9804-0353',
     coords: [-5.6028, -37.6889],
-    mapEmbed: null,
-    photos: { facade: null, interior: null, showcase: null, service: null },
   },
   {
     slug: 'severiano-melo',
@@ -44,8 +38,6 @@ const UNITS = [
     address: null,
     phone: '(84) 9 9954-5160',
     coords: [-5.7769, -37.9578],
-    mapEmbed: null,
-    photos: { facade: null, interior: null, showcase: null, service: null },
   },
   {
     slug: 'governador-dix-sept-rosado',
@@ -56,8 +48,6 @@ const UNITS = [
     address: null,
     phone: '(84) 9 9931-5631',
     coords: [-5.4589, -37.5208],
-    mapEmbed: null,
-    photos: { facade: null, interior: null, showcase: null, service: null },
   },
   {
     slug: 'barauna',
@@ -68,8 +58,6 @@ const UNITS = [
     address: null,
     phone: '(84) 9 9234-4054',
     coords: [-5.0800, -37.6169],
-    mapEmbed: null,
-    photos: { facade: null, interior: null, showcase: null, service: null },
   },
   {
     slug: 'natal',
@@ -80,23 +68,14 @@ const UNITS = [
     address: null,
     phone: null,
     coords: [-5.7950, -35.2090],
-    mapEmbed: null,
-    photos: { facade: null, interior: null, showcase: null, service: null },
   },
 ];
-
-const UNITS_PHOTOS = siteUrl('frontend/assets/unidades/');
 
 const unitFullName = (unit) => (unit.name === unit.city ? unit.name : `${unit.city} · ${unit.name}`);
 
 const unitUrl = (unit) => siteUrl(`loja/?u=${unit.slug}`);
 
 const unitsUrl = (hash = '') => siteUrl(`unidades/${hash}`);
-
-const unitPhoto = (file, label, alt) =>
-  file
-    ? `<img class="photo__media" src="${new URL(file, UNITS_PHOTOS).href}" alt="${alt}" loading="lazy">`
-    : `<div class="photo__media photo__empty overline">${label}</div>`;
 
 const padIndex = (index) => String(index + 1).padStart(2, '0');
 
