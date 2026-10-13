@@ -26,6 +26,8 @@ AddType image/webp .webp
   RewriteRule (^|/)\.(?!well-known/) - [R=404,L]
 
   RewriteRule ^(README|LICENSE)\.md$ - [R=404,L]
+
+  RewriteRule \.py$ - [R=404,L]
 </IfModule>
 
 <IfModule mod_headers.c>
